@@ -1,3 +1,7 @@
+## NERL
+
+Wikipedia's Never Ending Reading List :D
+
 ## First things first
 
 We all hate the setup of a project. Heaven knows how much of a headache it is for rails projects. So let's get started.
