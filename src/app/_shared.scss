@@ -1,0 +1,33 @@
+// Fonts
+// 'Gotham Rounded', arial, sans-serif;
+
+// Colors
+$black: #000000;
+$white: #FFFFFF;
+$blue:  #00A9F4;
+
+// Breakpoints
+@mixin for-phone-only {
+  @media (max-width: 599px) { @content; }
+}
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) { @content; }
+}
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) { @content; }
+}
+@mixin for-desktop-up {
+  @media (min-width: 1200px) { @content; }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) { @content; }
+}
+
+// Transitions
+@mixin uniform-transition($property...) {
+  $val: ();
+  @each $p in $property {
+    $val: append($val, ($p 0.3s ease), comma)
+  }
+  transition: $val;
+}
