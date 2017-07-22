@@ -5,3 +5,113 @@ body {
   color: $white;
   font-family: 'Gotham Rounded', arial, sans-serif;
 }
+
+.info-toggle {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  &:hover {
+    // .circle {
+    //   height: 34px;
+    //   width: 184px;
+    //   background-color: white;
+    //   border: none;
+    // }
+
+    .outer-circle {
+      width: 184px;
+      height: 34px;
+      border-radius: 15px;
+    }
+  
+    .inner-circle {
+      width: 150px;
+      height: 0;
+      border-radius: 15px;
+    }
+
+    .i {
+      transform: rotateZ(45deg);
+
+      .dot {
+        height: 0px;
+        width: 0px;
+      }
+
+      .line {
+        height: 184px;
+        margin-top: 0;
+      }
+    }
+  }
+
+  .outer-circle {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform: rotateZ(45deg);
+    background-color: white;
+    border-radius: 100%;
+    @include uniform-transition(height, width, border-radius);
+  }
+
+  .inner-circle {
+    width: 340px;
+    height: 340px;
+    position: absolute;
+    transform: rotateZ(45deg);
+    background-color: black;
+    border-radius: 100%;
+    @include uniform-transition(height, width, border-radius);
+  }
+  // .circle {
+  //   transform: rotateZ(45deg);
+  //   position: absolute;
+  //   height: 340px;
+  //   width: 340px;
+  //   border-radius: 100%;
+  //   border: 30px solid white;
+  //   @include uniform-transition(height, width, transform, margin-top, margin-left);
+
+    //  -- essentially copy the styling for the i
+
+    // border-left: 13px solid white;
+    // border-top-left-radius: 187px;
+    // border-top-right-radius: 187px;
+    // border-right: 13px solid white;
+    // border-top: 13px solid white;
+  // }
+
+  .i {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @include uniform-transition(transform);
+
+    .dot {
+      height: 34px;
+      width: 34px;
+      background-color: white;
+      border-radius: 100%;
+      @include uniform-transition(height, width);
+    }
+
+    .line {
+      height: 120px;
+      width: 34px;
+      background-color: white;
+      border-radius: 15px;
+      margin-top: 30px;
+      @include uniform-transition(height, margin-top);
+    }
+
+  }
+}

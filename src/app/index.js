@@ -72,6 +72,16 @@ export default class App extends Component {
               </div>
             </div>
           )}
+
+          <div className="info-toggle">
+            <div className="outer-circle"></div>
+            <div className="inner-circle"></div>
+            <div className="i">
+              <div className="dot"></div>
+              <div className="line"></div>
+            </div>
+          </div>
+
         </div>
       </Provider>
     );
