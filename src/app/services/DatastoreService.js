@@ -2,14 +2,19 @@ import axios from 'axios'
 
 export default class DatastoreService {
 
-  // Explore Google Functions, use service account for that. hit that function to get what we need
-
-  static get_node(node) {   
+  static get_node(node) {
     return axios({
-      method: 'get',
-      url: ``
+      method: 'post',
+      url: `https://us-central1-nerl-173717.cloudfunctions.net/WikipediaDatastoreQuery`,
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      data: {
+        'node': node
+      }
     }).then((res) => {
-      return res.data
+      // ds returns array
+      return res.data[0];
     })
   }
 }
