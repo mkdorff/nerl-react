@@ -5,6 +5,7 @@
   "dependencies": {
     "axios": "^0.16.2",
     "history": "^4.6.1",
+    "jsonp": "^0.2.1",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-redux": "^5.0.5",

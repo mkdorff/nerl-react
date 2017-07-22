@@ -12,9 +12,5 @@ export default class DatastoreService {
       return res.data
     })
   }
-
-  static post_appointment(data) {
-    
-  }
 }
 
