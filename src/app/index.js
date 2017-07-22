@@ -6,6 +6,11 @@ import DatastoreService from './services/DatastoreService'
 import './fonts/fonts.css'
 import './app.css'
 
+// TODO:
+// Visual Things
+// upload suggestions to datastore, so only one query per node
+// Input backspace bug
+
 export default class App extends Component {
   constructor(props) {
     super(props)
@@ -17,7 +22,7 @@ export default class App extends Component {
   }
 
   _onInput = (e) => {
-    // TODO: debounce
+    // debounce
     // ---- OR ----
     // Add global listener on 'backspace' key that is a setTimeout(fn, ~200) that looks at the value of the input box
     if (e.target.value !== '') {
