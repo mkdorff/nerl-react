@@ -3,6 +3,7 @@ import { Provider } from 'react-redux'
 import { store } from './redux'
 import OpenSearchService from './services/OpenSearchService'
 import DatastoreService from './services/DatastoreService'
+import InfoIcon from './components/InfoIcon'
 import './fonts/fonts.css'
 import './app.css'
 
@@ -16,6 +17,7 @@ export default class App extends Component {
     super(props)
     
     this.state = {
+      infoOpen: false,
       searchSuggestions: [],
       nodeData: null // {}
     }
@@ -73,13 +75,8 @@ export default class App extends Component {
             </div>
           )}
 
-          <div className="info-toggle">
-            <div className="outer-circle"></div>
-            <div className="inner-circle"></div>
-            <div className="i">
-              <div className="dot"></div>
-              <div className="line"></div>
-            </div>
+          <div className="info">
+            <InfoIcon /> {/* tweak numbers | also hovers and states */}
           </div>
 
         </div>
